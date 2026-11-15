@@ -1,23 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 146" width="850" height="146" role="img" aria-label="Loading: going deep on cloud infrastructure. Kubernetes, cloud infrastructure as code, cloud identity and access, observability.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 158" width="850" height="158" role="img" aria-label="Loading: going deep on cloud infrastructure. Kubernetes, cloud infrastructure as code, cloud identity and access, observability.">
 <defs><style>
 .sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
 .mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}
-</style></defs>
-<defs><clipPath id="bar"><rect x="0" y="140" width="850" height="3" rx="1.5"/></clipPath></defs>
+</style>
+<linearGradient id="go" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2b33d"/><stop offset="1" stop-color="#ff7a18"/></linearGradient>
+<linearGradient id="fgv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f6fc"/><stop offset="1" stop-color="#aeb8c4"/></linearGradient>
+<filter id="glow" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
+<defs><clipPath id="bar"><rect x="0" y="150" width="850" height="4" rx="2"/></clipPath>
+<linearGradient id="chipf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#161b22"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+<linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff7a18" stop-opacity="0"/><stop offset="0.8" stop-color="#f2b33d"/><stop offset="1" stop-color="#fff1c9"/></linearGradient></defs>
 <text x="0" y="20" class="mono" font-size="15" fill="#f2b33d">loading<tspan opacity="0.15">.<animate attributeName="opacity" values="0.15;1;0.15" dur="0.9s" begin="-0.9s" repeatCount="indefinite"/></tspan><tspan opacity="0.15">.<animate attributeName="opacity" values="0.15;1;0.15" dur="0.9s" begin="-0.6s" repeatCount="indefinite"/></tspan><tspan opacity="0.15">.<animate attributeName="opacity" values="0.15;1;0.15" dur="0.9s" begin="-0.3s" repeatCount="indefinite"/></tspan></text>
-<text x="-1" y="64" class="sans" font-size="32" font-weight="800" letter-spacing="-1" fill="#f0f6fc">Going deep on cloud infrastructure</text>
-<g transform="translate(0 86)"><rect x="0.75" y="0.75" width="121" height="34" rx="17" fill="#11151b" stroke="#262c35" stroke-width="1.5"/>
-<circle cx="17" cy="17.75" r="3.5" fill="#f2b33d"><animate attributeName="opacity" values="1;0.2;1" dur="1.2s" begin="-0.0s" repeatCount="indefinite"/></circle>
+<text x="-1" y="66" class="sans" font-size="34" font-weight="900" letter-spacing="-1" transform="translate(5.0 5.0)" fill="#4a1f00" stroke="#4a1f00" stroke-width="1" stroke-linejoin="round">Going deep on cloud infrastructure</text>
+<text x="-1" y="66" class="sans" font-size="34" font-weight="900" letter-spacing="-1" transform="translate(4.0 4.0)" fill="#773606" stroke="#773606" stroke-width="1" stroke-linejoin="round">Going deep on cloud infrastructure</text>
+<text x="-1" y="66" class="sans" font-size="34" font-weight="900" letter-spacing="-1" transform="translate(3.0 3.0)" fill="#a44c0c" stroke="#a44c0c" stroke-width="1" stroke-linejoin="round">Going deep on cloud infrastructure</text>
+<text x="-1" y="66" class="sans" font-size="34" font-weight="900" letter-spacing="-1" transform="translate(2.0 2.0)" fill="#d26312" stroke="#d26312" stroke-width="1" stroke-linejoin="round">Going deep on cloud infrastructure</text>
+<text x="-1" y="66" class="sans" font-size="34" font-weight="900" letter-spacing="-1" transform="translate(1.0 1.0)" fill="#ff7a18" stroke="#ff7a18" stroke-width="1" stroke-linejoin="round">Going deep on cloud infrastructure</text>
+<text x="-1" y="66" class="sans" font-size="34" font-weight="900" letter-spacing="-1" fill="url(#fgv)">Going deep on cloud infrastructure</text>
+<g transform="translate(0 94)"><rect x="4.75" y="5.75" width="121" height="34" rx="17" fill="#ff7a18" fill-opacity="0.18" stroke="url(#go)" stroke-opacity="0.45" stroke-width="1.2"/>
+<rect x="0.75" y="0.75" width="121" height="34" rx="17" fill="url(#chipf)" stroke="url(#go)" stroke-width="1.5"/>
+<circle cx="17" cy="17.75" r="6" fill="#f2b33d" filter="url(#soft)"><animate attributeName="opacity" values="0.9;0;0.9" dur="1.2s" begin="-0.0s" repeatCount="indefinite"/></circle>
+<circle cx="17" cy="17.75" r="3.5" fill="#f2b33d"/>
 <text x="29" y="22.5" class="mono" font-size="13" fill="#f0f6fc">Kubernetes</text></g>
-<g transform="translate(131 86)"><rect x="0.75" y="0.75" width="263" height="34" rx="17" fill="#11151b" stroke="#262c35" stroke-width="1.5"/>
-<circle cx="17" cy="17.75" r="3.5" fill="#f2b33d"><animate attributeName="opacity" values="1;0.2;1" dur="1.2s" begin="-0.3s" repeatCount="indefinite"/></circle>
+<g transform="translate(135 94)"><rect x="4.75" y="5.75" width="263" height="34" rx="17" fill="#ff7a18" fill-opacity="0.18" stroke="url(#go)" stroke-opacity="0.45" stroke-width="1.2"/>
+<rect x="0.75" y="0.75" width="263" height="34" rx="17" fill="url(#chipf)" stroke="url(#go)" stroke-width="1.5"/>
+<circle cx="17" cy="17.75" r="6" fill="#f2b33d" filter="url(#soft)"><animate attributeName="opacity" values="0.9;0;0.9" dur="1.2s" begin="-0.3s" repeatCount="indefinite"/></circle>
+<circle cx="17" cy="17.75" r="3.5" fill="#f2b33d"/>
 <text x="29" y="22.5" class="mono" font-size="13" fill="#f0f6fc">Cloud infrastructure as code</text></g>
-<g transform="translate(404 86)"><rect x="0.75" y="0.75" width="224" height="34" rx="17" fill="#11151b" stroke="#262c35" stroke-width="1.5"/>
-<circle cx="17" cy="17.75" r="3.5" fill="#f2b33d"><animate attributeName="opacity" values="1;0.2;1" dur="1.2s" begin="-0.6s" repeatCount="indefinite"/></circle>
+<g transform="translate(412 94)"><rect x="4.75" y="5.75" width="224" height="34" rx="17" fill="#ff7a18" fill-opacity="0.18" stroke="url(#go)" stroke-opacity="0.45" stroke-width="1.2"/>
+<rect x="0.75" y="0.75" width="224" height="34" rx="17" fill="url(#chipf)" stroke="url(#go)" stroke-width="1.5"/>
+<circle cx="17" cy="17.75" r="6" fill="#f2b33d" filter="url(#soft)"><animate attributeName="opacity" values="0.9;0;0.9" dur="1.2s" begin="-0.6s" repeatCount="indefinite"/></circle>
+<circle cx="17" cy="17.75" r="3.5" fill="#f2b33d"/>
 <text x="29" y="22.5" class="mono" font-size="13" fill="#f0f6fc">Cloud identity &amp; access</text></g>
-<g transform="translate(638 86)"><rect x="0.75" y="0.75" width="145" height="34" rx="17" fill="#11151b" stroke="#262c35" stroke-width="1.5"/>
-<circle cx="17" cy="17.75" r="3.5" fill="#f2b33d"><animate attributeName="opacity" values="1;0.2;1" dur="1.2s" begin="-0.9s" repeatCount="indefinite"/></circle>
+<g transform="translate(650 94)"><rect x="4.75" y="5.75" width="145" height="34" rx="17" fill="#ff7a18" fill-opacity="0.18" stroke="url(#go)" stroke-opacity="0.45" stroke-width="1.2"/>
+<rect x="0.75" y="0.75" width="145" height="34" rx="17" fill="url(#chipf)" stroke="url(#go)" stroke-width="1.5"/>
+<circle cx="17" cy="17.75" r="6" fill="#f2b33d" filter="url(#soft)"><animate attributeName="opacity" values="0.9;0;0.9" dur="1.2s" begin="-0.9s" repeatCount="indefinite"/></circle>
+<circle cx="17" cy="17.75" r="3.5" fill="#f2b33d"/>
 <text x="29" y="22.5" class="mono" font-size="13" fill="#f0f6fc">Observability</text></g>
-<rect x="0" y="140" width="850" height="3" rx="1.5" fill="#262c35"/>
-<g clip-path="url(#bar)"><rect x="-220" y="140" width="220" height="3" fill="#f2b33d"><animate attributeName="x" values="-220;850" dur="1.4s" repeatCount="indefinite"/></rect></g>
+<rect x="0" y="150" width="850" height="4" rx="2" fill="#262c35"/>
+<g clip-path="url(#bar)"><rect x="-260" y="150" width="260" height="4" fill="url(#sweep)"><animate attributeName="x" values="-260;850" dur="1.4s" repeatCount="indefinite"/></rect></g>
 </svg>
