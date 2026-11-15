@@ -1,3 +1,7 @@
-<img src="assets/header.svg" alt="Mert Aslan (DryMertini). Full-stack developer, AI agents and pipelines." width="100%">
-
-<img src="assets/now.svg" alt="Loading: going deep on cloud infrastructure. Kubernetes, cloud infrastructure as code, cloud identity and access, observability." width="100%">
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg"><img src="assets/header-dark.svg" alt="Mert Aslan (DryMertini). Full-stack developer, AI agents and pipelines." width="100%"></picture>
+<br><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/loading-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/loading-light.svg"><img src="assets/loading-dark.svg" alt="Loading: going deep on cloud infrastructure. Kubernetes, cloud infrastructure as code, cloud identity and access, observability." width="100%"></picture>
+<br><br>
+<a href="https://github.com/Naakugod11/autark"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/autark-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/autark-light.svg"><img src="assets/autark-dark.svg" alt="Autark: agent-to-agent trading floor on Solana with x402 micropayments." width="49%"></picture></a>&nbsp;<a href="https://github.com/Psyche0920/PastPort"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pastport-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/pastport-light.svg"><img src="assets/pastport-dark.svg" alt="PastPort: scan a real place with LiDAR and play it as a game in VR or on desktop." width="49%"></picture></a>
+<br><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg"><img src="assets/stack-dark.svg" alt="Stack: Python, C, TypeScript, JavaScript, SQL, React, Next.js, Solana." width="100%"></picture>
