@@ -3,6 +3,7 @@
 import os, sys
 from letters import word
 from robot import cables, robot
+from plumb_art import plumb_art
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else "out"
 os.makedirs(OUT, exist_ok=True)
@@ -184,7 +185,7 @@ def autark(p):
                  + f'<circle cx="{x}" cy="{y}" r="11" fill="{p["chip2"]}" stroke="url(#go)" stroke-width="2"/>'
                  f'<circle cx="{x}" cy="{y}" r="3" fill="{p["gold"]}"/>'
                  f'<circle cx="{x}" cy="{y}" r="11" fill="none" stroke="{p["gold"]}" stroke-width="1.5"><animate attributeName="r" values="11;22" dur="1.6s" begin="-{i * 0.5}s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.6s" begin="-{i * 0.5}s" repeatCount="indefinite"/></circle>')
-    return card(p, "01", "Autark", "Agent-to-agent trading floor on Solana,", "settled with x402 micropayments.",
+    return card(p, "02", "Autark", "Agent-to-agent trading floor on Solana,", "settled with x402 micropayments.",
                 "TypeScript · Solana · x402", "\n".join(a), "Autark: agent-to-agent trading floor on Solana with x402 micropayments.")
 
 
@@ -209,8 +210,32 @@ def pastport(p):
         an = f'<animate attributeName="d" values="{vals}" keyTimes="0;0.3;0.8;1" dur="3.6s" begin="-{i * 0.5}s" repeatCount="indefinite"/>'
         a.append(f'<path d="M{bx:.1f} {by:.1f}v0" stroke="{p["green"]}" stroke-width="12" stroke-linecap="round" opacity="0.5" filter="url(#soft)">{an}</path>'
                  f'<path d="M{bx:.1f} {by:.1f}v0" stroke="{p["green"]}" stroke-width="7" stroke-linecap="round">{an}</path>')
-    return card(p, "02", "PastPort", "Scan a real place with LiDAR.", "Play it as a game, in VR or on desktop.",
+    return card(p, "03", "PastPort", "Scan a real place with LiDAR.", "Play it as a game, in VR or on desktop.",
                 "JavaScript · 3D · VR", "\n".join(a), "PastPort: scan a real place with LiDAR and play it as a game in VR or on desktop.")
+
+
+def plumbline(p):
+    W, H = 834, 200
+    plates = "".join(f'<rect x="{1 + k * 2}" y="{1 + k * 2}" width="{W}" height="{H}" rx="14" fill="{lerp(p["hot"], p["deep"], k / 6)}" fill-opacity="0.9"/>' for k in range(6, 0, -1))
+    b = f'''<defs><linearGradient id="cardf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{p['chip']}"/><stop offset="1" stop-color="{p['chip2']}"/></linearGradient>
+<linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{p['gold']}"/><stop offset="0.6" stop-color="{p['hot']}" stop-opacity="0.5"/><stop offset="1" stop-color="{p['hot']}" stop-opacity="0"/></linearGradient></defs>
+{plates}
+<rect x="1" y="1" width="{W}" height="{H}" rx="14" fill="url(#cardf)" stroke="url(#go)" stroke-opacity="0.7" stroke-width="1.5"/>
+<path d="M15 1H360" stroke="url(#edge)" stroke-width="2.5" stroke-linecap="round"/>
+<text x="24" y="38" class="mono" font-size="11" letter-spacing="1.5" fill="{p['dim']}">01 / SOLO BUILD</text>
+<path d="M800 26h12v12M812 26l-13 13" fill="none" stroke="{p['gold']}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="23" y="92" class="sans" font-size="40" font-weight="900" letter-spacing="-1.5" fill="{p['fg']}">plumbline</text>
+<text x="24" y="126" class="sans" font-size="14" fill="{p['mute']}">The 90% of an LLM app that isn't the LLM: data,</text>
+<text x="24" y="146" class="sans" font-size="14" fill="{p['mute']}">retrieval, validation, failure handling and evals.</text>
+<text x="24" y="182" class="mono" font-size="12" fill="{p['gold']}">Python · RAG · fault injection · evals</text>
+<text x="378" y="84" class="sans" font-size="34" font-weight="900" fill="{p['green']}">100%</text>
+<text x="378" y="102" class="mono" font-size="11" fill="{p['mute']}">availability under</text>
+<text x="378" y="116" class="mono" font-size="11" fill="{p['mute']}">injected faults</text>
+<text x="378" y="158" class="sans" font-size="34" font-weight="900" fill="{p['green']}">0%</text>
+<text x="446" y="146" class="mono" font-size="11" fill="{p['mute']}">poisoned</text>
+<text x="446" y="160" class="mono" font-size="11" fill="{p['mute']}">answers served</text>
+{plumb_art(p, 556, 50, 192)}'''
+    return svg(W + 15, H + 15, "plumbline: the 90% of an LLM app that isn't the LLM. 100% availability and 0% poisoned answers under injected faults.", p, b)
 
 
 def marquee(p):
@@ -239,6 +264,6 @@ def marquee(p):
 
 if __name__ == "__main__":
     for mode, p in PAL.items():
-        for name, fn in [("header", header), ("loading", loading), ("autark", autark), ("pastport", pastport), ("stack", marquee)]:
+        for name, fn in [("header", header), ("loading", loading), ("plumbline", plumbline), ("autark", autark), ("pastport", pastport), ("stack", marquee)]:
             open(f"{OUT}/{name}-{mode}.svg", "w").write(fn(p))
     print("ok")

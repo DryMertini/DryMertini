@@ -115,7 +115,16 @@ def maze(p):
     return svg(W + 11, H + 11, "a-maze-ing: generates a maze, then finds the shortest way out.", p, body)
 
 
+
+def plumb(p):
+    from plumb_art import plumb_art
+    W, H = 838, 196
+    body = frame(p, W, H) + head(p, "PLUMBLINE", "The 90% of an LLM app that isn't the LLM.", "Python  ·  RAG  ·  validation  ·  resilience  ·  evals") + plumb_art(p, 548, 40)
+    return svg(W + 11, H + 11, "plumbline: the 90% of an LLM app that isn't the LLM.", p, body)
+
+
 for mode, p in PAL.items():
     open(f"{OUT}/push_swap-{mode}.svg", "w").write(push_swap(p))
     open(f"{OUT}/maze-{mode}.svg", "w").write(maze(p))
+    open(f"{OUT}/plumbline-{mode}.svg", "w").write(plumb(p))
 print("ok")
