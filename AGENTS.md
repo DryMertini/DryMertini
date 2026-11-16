@@ -37,4 +37,4 @@ Read this first, then `tools/README.md` for the mechanics. This file is the why 
 
 - One pull request per change, merged into the default branch. Small and named for what changed.
 - Show the owner a still before anything that changes the look; fixes and additions he already asked for can go straight in.
-- Nothing goes on the page that the owner cannot back up if asked about it in an interview.
+- Every claim on the page links to the repo that proves it.
