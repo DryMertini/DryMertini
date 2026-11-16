@@ -6,7 +6,7 @@ The profile README (`/README.md`) is five animated SVGs, each in a dark and a li
 
 ```sh
 cd tools
-python3 gen.py ../art      # writes art/{header,loading,autark,pastport,stack}-{dark,light}.svg
+python3 gen.py ../art      # writes art/{header,loading,plumbline,autark,pastport,stack}-{dark,light}.svg
 ```
 
 Python 3.9+, standard library only. To preview without a browser: `rsvg-convert art/header-dark.svg -o header.png` (stills only, no animation).
@@ -17,8 +17,9 @@ Python 3.9+, standard library only. To preview without a browser: `rsvg-convert 
 |---|---|
 | `gen.py` | Palettes (`PAL`), shared styles, and one function per graphic: `header`, `loading`, `autark` / `pastport` (project cards), `marquee` (stack ticker) |
 | `letters.py` | The blueprint lettering. Each glyph is a list of overlapping outlined pieces; `word()` draws a word with optional wireframe depth and joints. Only the letters in `GLYPHS` exist; add a glyph before using a new letter |
+| `plumb_art.py` | The plumbline artwork (five layers lighting in turn, swinging plumb bob), shared by the profile card and the repo header |
 | `robot.py` | The robot on the cable hub and the pulses feeding it. One 18 s cycle (`T`): battery fills, arms pick up scraps, robot dance at full charge (`FULL`..`RESET`), reset |
-| `proj.py` | Headers for the Push_Swap and a-maze-ing repos (`python3 proj.py out`, then copy into those repos' `art/`) |
+| `proj.py` | Headers for the Push_Swap, a-maze-ing and plumbline repos (`python3 proj.py out`, then copy into those repos' `art/`) |
 
 ## Rules that keep it working on GitHub
 
@@ -30,4 +31,4 @@ Python 3.9+, standard library only. To preview without a browser: `rsvg-convert 
 
 ## Layout order in README.md
 
-header, project cards, stack ticker, loading panel.
+header, plumbline card, Autark and PastPort cards, stack ticker, loading panel.
